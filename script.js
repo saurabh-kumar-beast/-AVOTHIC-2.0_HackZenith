@@ -14,6 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoContainer = document.getElementById("video-container");
     const subtitles = document.getElementById("subtitles");
 
+    //bhai yaha se handle hoga calling
+    loadYoutubeBtn.addEventListener("click", () => {
+    const url = youtubeUrlInput.value.trim();
+    if (url) {
+        transcribeVideo(url);
+    }
+});
+
+translateBtn.addEventListener("click", () => {
+    const transcript = document.getElementById('transcript').value;
+    const sourceLang = document.getElementById('source-language').value;
+    const targetLang = document.getElementById('target-language').value;
+    if (transcript) {
+        translateText(transcript, sourceLang, targetLang);
+    }
+});
+
+
     // Populate language dropdowns
     languages.forEach(lang => {
         const option1 = document.createElement("option");
