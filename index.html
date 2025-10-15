@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VideoTranslate - Learn in Your Language</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>VideoTranslate</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Learn with translated videos in your regional language</h2>
+            <p>Enter a YouTube URL or upload a local video to get real-time translation and subtitles.</p>
+        </section>
+
+        <section class="video-input">
+            <div class="tabs">
+                <button id="youtube-tab" class="tab active">YouTube URL</button>
+                <button id="upload-tab" class="tab">Upload Local Video</button>
+            </div>
+            <div class="tab-content">
+                <div id="youtube-input" class="tab-panel active">
+                    <input type="text" id="youtube-url" placeholder="Enter YouTube video URL..." />
+                    <button id="load-youtube">Load Video</button>
+                </div>
+                <div id="upload-input" class="tab-panel">
+                    <input type="file" id="local-video-upload" accept="video/*" />
+                </div>
+            </div>
+        </section>
+
+        <section class="video-player-section">
+            <!-- Video player and subtitles will load here -->
+            <div id="video-container"></div>
+            <div id="subtitles"></div>
+        </section>
+
+        <section class="language-selection">
+            <label for="source-language">Source Language:</label>
+            <select id="source-language"></select>
+            <label for="target-language">Target Language:</label>
+            <select id="target-language"></select>
+            <button id="translate-btn">Translate</button>
+        </section>
+
+        <section class="transcript-section">
+            <h3>Transcript</h3>
+            <textarea id="transcript" readonly></textarea>
+            <h3>Translated Text</h3>
+            <textarea id="translated-text" readonly></textarea>
+        </section>
+    </main>
+
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
